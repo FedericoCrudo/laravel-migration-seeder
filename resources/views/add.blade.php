@@ -10,7 +10,7 @@ Product
     @if (session('success') )
   
     @endif
-<form action="{{route('dress.store')}}" method="post">
+<form action="{{route('account.store')}}" method="post">
     @method('POST')
     @csrf
   <div class="form-group">
@@ -18,16 +18,16 @@ Product
     <input type="text" class="form-control" id="nome" name="name" aria-describedby="emailHelp" placeholder="Nome...">
   </div>
   <div class="form-group">
-    <label for="descrizione">Descrizione</label>
-    <textarea type="text" class="form-control" id="descrizione" name="descrizione" placeholder="Descrizione..."></textarea>
+    <label for="cognome">Cognome</label>
+    <textarea type="text" class="form-control" id="cognome" name="cognome" placeholder="Cognome"></textarea>
   </div>
   <div class="form-group">
-    <label for="price">Prezzo</label>
-    <input type="text" class="form-control" id="price" name="price" placeholder="Prezzo">
+    <label for="price">Indirizzo</label>
+    <input type="text" class="form-control" id="indirizzo" name="indirizzo" placeholder="Indirizzo">
   </div>
   <div class="form-group">
-    <label for="img">IMG</label>
-    <input type="text" class="form-control" id="img" name="img" placeholder="Immagine">
+    <label for="img">data</label>
+    <input type="text" class="form-control" id="data" name="data" placeholder="data">
   </div>
   
   <button type="submit" class="btn btn-success">Submit</button>

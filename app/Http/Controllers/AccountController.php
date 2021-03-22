@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Account;
@@ -48,6 +48,7 @@ class AccountController extends Controller
         $form= new Account();
 
         $form->fill($data);
+        $form->data= Carbon::createfromformat('d/m/Y', $data['data']);
         $form->save();
 
         return redirect()->route('account.create')->with('add','ok');
